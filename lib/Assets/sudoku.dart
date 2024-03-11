@@ -234,6 +234,13 @@ class Sudoku {
   }
 }
 
+class SudokuGame extends Sudoku {
+  SudokuGame({required this.difficulty}) : playingGrid = _fullGrid.toList();
+
+  final int difficulty;
+  List<List<int?>> playingGrid;
+}
+
 void main() {
   final myGrid = Sudoku(difficulty: 15, size: 9);
   print(myGrid);
